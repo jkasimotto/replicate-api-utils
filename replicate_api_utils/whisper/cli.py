@@ -1,5 +1,5 @@
 import click
-from whisper.main import transcribe
+from replicate_api_utils.whisper.main import transcribe
 
 @click.command()
 @click.argument("target")
@@ -9,7 +9,7 @@ from whisper.main import transcribe
 @click.option("--transcription", default="plain text", type=click.Choice(["plain text", "srt", "vtt"]), help="The format for the transcription.")
 @click.option("--translate", is_flag=True, help="Translate the text to English when set to True.")
 @click.option("--language", default=None, type=str, help="Language spoken in the audio, specify None to perform language detection.")
-def cli(target, to, duplicate, model, transcription, translate, language):
+def main(target, to, duplicate, model, transcription, translate, language):
     # Map the command-line options to the parameters of the transcribe function
     params = {
         "model": model,
@@ -23,4 +23,4 @@ def cli(target, to, duplicate, model, transcription, translate, language):
 
 
 if __name__ == "__main__":
-    cli()
+    main()
