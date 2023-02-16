@@ -8,7 +8,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'click',
-        'replicateai',
+        'replicate',
         # any other necessary dependencies
     ],
 )
