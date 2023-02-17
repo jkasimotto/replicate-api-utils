@@ -10,7 +10,7 @@ setup(
     install_requires=[
         'click',
         'replicate',
-        # any other necessary dependencies
+        'tqdm',
     ],
     entry_points={
         "console_scripts": [
