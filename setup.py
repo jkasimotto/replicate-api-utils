@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='replicate_api_utils',
-    version='0.1.0',
+    version='0.1.1',
     author='Julian Otto',
     author_email="julianotto@outlook.com",
     description='Python package for accessing the Replicate API',
