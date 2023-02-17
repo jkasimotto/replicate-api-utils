@@ -7,7 +7,7 @@ import replicate
 def transcribe(target, to=None, duplicate="skip", **params):
 
     model = replicate.models.get("openai/whisper")
-    version = model.version("30414ee7c4fffc37e260fcab7842b5be470b9b840f2b608f5baa9bbef9a259ed")
+    version = model.versions.get("30414ee7c4fffc37e260fcab7842b5be470b9b840f2b608f5baa9bbef9a259ed")
 
     # Define a dictionary to map the input types to the corresponding functions
     transcribe_functions = {
