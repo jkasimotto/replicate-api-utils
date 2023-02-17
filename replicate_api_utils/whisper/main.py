@@ -35,7 +35,7 @@ def transcribe_file(version, filepath, **params):
     # Transcribe the audio
     try:
         result = version.predict(
-            audio=open(f'{filepath}' 'rb'), **params)['transcription']
+            audio=open(f'{filepath}', 'rb'), **params)['transcription']
     except Exception as e:
         print("Error: ", e)
         result = None
