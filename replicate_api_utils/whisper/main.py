@@ -73,7 +73,7 @@ def write_or_return(filename, result, folder=None):
     elif folder is None:
         return result
     else:
-        file_path = os.join(folder, filename)
+        file_path = os.path.join(folder, filename)
         with open(file_path, "w") as f:
             f.write(result)
         print(f"Transcribed file saved to {file_path}")
